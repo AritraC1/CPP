@@ -8,7 +8,7 @@ void dayDate(int num)
     {
     case 1:
         cout << "Monday" << endl;
-        break;
+        break; // takes out of all the condition loops
 
     case 2:
         cout << "Tuesday" << endl;
@@ -35,7 +35,7 @@ void dayDate(int num)
         break;
 
     default:
-        cout << "Error" << endl;
+        cout << "Invalid Day" << endl;
         break;
     }
 }
