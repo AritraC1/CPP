@@ -1,8 +1,10 @@
 #include <iostream>
+#include "conditionals.hpp"
 using namespace std;
 
 // conditionals
-void isAdult(int age) {
+void isAdult(int age) 
+{
     if (age < 18) {
         cout << "Not an Adult" << endl;
     }

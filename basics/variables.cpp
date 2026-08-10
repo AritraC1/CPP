@@ -1,5 +1,6 @@
 #include <iostream>
 #include <typeinfo>
+#include "variables.hpp"
 using namespace std;
 
 // Variables

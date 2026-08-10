@@ -1,6 +1,5 @@
 #include <iostream>
-// #include "basics/variables.cpp"
-#include "basics/conditionals.cpp"
+#include "basics/conditionals.hpp"
 using namespace std;
 
 int main() {
