@@ -1,10 +1,10 @@
 #include <iostream>
 // #include "basics/loops.hpp"
-#include "patterns/p1_rectangular_star.hpp"
+#include "patterns/p2_right_angled_triangle.hpp"
 using namespace std;
 
 int main() {
-    cout << "Hello World" << endl;
+    // cout << "Hello World" << endl;
     
     // variables();
     // isAdult(12);
@@ -14,10 +14,8 @@ int main() {
     // odd(5);
 
     // Printing patterns
-    int n;
-    cout << "Enter the value of n: ";
-    cin >> n;
-    rectangular_star(n);
+    // rectangular_star(4);
+    right_angled_triangle(4);
 
     return 0;
 }
