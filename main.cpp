@@ -1,11 +1,12 @@
 #include <iostream>
-// #include "basics/loops.hpp"
-#include "patterns/p2_right_angled_triangle.hpp"
+// #include "basics/basics.hpp"
+#include "patterns/patterns.hpp"
 using namespace std;
 
 int main() {
     // cout << "Hello World" << endl;
     
+    // <=== BASICS ===>
     // variables();
     // isAdult(12);
     // dayDate(8);
@@ -13,7 +14,7 @@ int main() {
     // numbers(7);
     // odd(5);
 
-    // Printing patterns
+    // <=== PATTERNS ===>
     // rectangular_star(4);
     right_angled_triangle(4);
 

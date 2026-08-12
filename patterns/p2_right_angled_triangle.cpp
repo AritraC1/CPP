@@ -1,6 +1,6 @@
 /*
 
-Pattern 2: Right-Angled Triangle Pattern
+Pattern 2: Right-Angled Triangle
 
 *
 **
@@ -11,7 +11,7 @@ Pattern 2: Right-Angled Triangle Pattern
 */
 
 #include <iostream>
-#include "p2_right_angled_triangle.hpp"
+#include "patterns.hpp"
 using namespace std;
 
 void right_angled_triangle(int n) {
