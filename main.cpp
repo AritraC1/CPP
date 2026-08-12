@@ -16,7 +16,18 @@ int main() {
 
     // <=== PATTERNS ===>
     // rectangular_star(4);
-    right_angled_triangle(4);
+
+    // cout << endl;
+
+    // right_angled_triangle(4);
+
+    cout << endl;
+
+    right_angled_number_pyramid_1(5);
+
+    cout << endl;
+
+    right_angled_number_pyramid_2(5);
 
     return 0;
 }
