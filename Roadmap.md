@@ -1,14 +1,12 @@
 # DSA Roadmap
 
-## Phase 0 — C++ Refresher (3-4 days max)
+## Phase 0 — C++ Refresher
 - [ ] Loops, functions, pointers/references (just enough comfort, not mastery)
 - [ ] Pass-by-value vs pass-by-reference
 - [ ] STL: `vector`, `pair`
 - [ ] STL: `map` / `unordered_map`, `set` / `unordered_set`
 - [ ] STL: `queue`, `stack`, `priority_queue`, `deque`
 - [ ] Built-ins: `sort()`, `lower_bound()`, `upper_bound()`, basic string functions
-
----
 
 ## Phase 1 — Foundations
 - [ ] Time & Space Complexity (Big-O, how to analyze your own code)
@@ -21,7 +19,7 @@
 - [ ] Sorting algorithms (merge sort, quick sort — understand, don't memorize implementation)
 - [ ] Binary Search (on arrays, and on answer — a very underrated pattern)
 
-## Phase 2 — Recursion & Backtracking (your known wall — slow down here)
+## Phase 2 — Recursion & Backtracking
 - [ ] Recursion basics — trace by hand first, draw call stacks, predict output before solving
 - [ ] Recursion on arrays/strings (reverse, subsets, permutations)
 - [ ] Backtracking pattern (subsets, permutations, combinations, N-Queens, Sudoku-style problems)
@@ -68,7 +66,7 @@
 - [ ] Greedy basics — activity selection, interval scheduling
 - [ ] Greedy with sorting (merge intervals, meeting rooms)
 
-## Phase 8 — Advanced / Polish (only after everything above is solid)
+## Phase 8 — Advanced / Polish
 - [ ] Bit Manipulation (AND/OR/XOR tricks, common bit problems)
 - [ ] Segment Tree / Fenwick Tree (BIT) — only if aiming for CP later
 - [ ] Sliding Window Maximum (advanced monotonic deque usage)
