@@ -15,7 +15,7 @@ Pattern 3A: Right-Angled Number Pyramid - I
 using namespace std;
 
 void right_angled_number_pyramid_1(int n) {
-    for (int i = 1; i<n; i++) {
+    for (int i = 1; i<=n; i++) {
         for (int j = 1; j<=i; j++) {
             cout << j;
         }
@@ -38,7 +38,7 @@ Pattern 3B: Right-Angled Number Pyramid - II
 */
 
 void right_angled_number_pyramid_2(int n) {
-    for (int i = 1; i<n; i++) {
+    for (int i = 1; i<=n; i++) {
         for (int j = 1; j<=i; j++) {
             cout << i;
         }
