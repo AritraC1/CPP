@@ -17,12 +17,11 @@ int main() {
     // <=== PATTERNS ===>
     // rectangular_star(4);
     // right_angled_triangle(4);
-
-    right_angled_number_pyramid_1(5);
-
-    cout << endl;
-
-    right_angled_number_pyramid_2(5);
+    // right_angled_number_pyramid_1(5);
+    // right_angled_number_pyramid_2(5);
+    // inverted_right_pyramid(5);
+    // inverted_numbered_right_pyramid(5);
+    star_pyramid(6);
 
     return 0;
 }
