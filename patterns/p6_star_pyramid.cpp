@@ -22,12 +22,10 @@ void star_pyramid(int n) {
             cout << " ";
         }
 
-
         // Star
         for (int j = 0; j< 2*i + 1; j++) {
             cout << "*";
         }
-
         
         // Space
         for (int j = n-i-1; j>0; j--) {
