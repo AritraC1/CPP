@@ -1,6 +1,6 @@
 #pragma once
 
-// Pattern1: Rectangular Star
+// Pattern 1: Rectangular Star
 void rectangular_star(int n);
 
 // Pattern 2: Right-Angled Triangle
@@ -18,3 +18,6 @@ void inverted_numbered_right_pyramid(int n);
 
 // Pattern 6: Star Pyramid
 void star_pyramid(int n);
+
+// Pattern 7: Inverted Star Pyramid
+void inverted_star_pyrmaid(int n);

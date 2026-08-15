@@ -32,7 +32,6 @@ void star_pyramid(int n) {
             cout << " ";
         }
 
-
         cout << endl;
     }
 }

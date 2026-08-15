@@ -21,7 +21,8 @@ int main() {
     // right_angled_number_pyramid_2(5);
     // inverted_right_pyramid(5);
     // inverted_numbered_right_pyramid(5);
-    star_pyramid(5);
+    // star_pyramid(5);
+    inverted_star_pyrmaid(5);
 
     return 0;
 }
