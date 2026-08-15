@@ -14,7 +14,6 @@ Pattern 6: Star Pyramid
 #include "patterns.hpp"
 using namespace std;
 
-// TODO
 void star_pyramid(int n) {
     for (int i = 0; i<n; i++) {
         // Space

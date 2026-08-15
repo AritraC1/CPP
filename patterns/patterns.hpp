@@ -21,3 +21,6 @@ void star_pyramid(int n);
 
 // Pattern 7: Inverted Star Pyramid
 void inverted_star_pyrmaid(int n);
+
+// Pattern 8: Diamond Star
+void diamond_star(int n);
