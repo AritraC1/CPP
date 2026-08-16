@@ -16,3 +16,6 @@ void findEvenNumbers(int num);
 void numbers(int num);
 void odd(int num);
 
+// STL
+void stl();
+

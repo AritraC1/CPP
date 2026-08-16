@@ -1,6 +1,6 @@
 #include <iostream>
-// #include "basics/basics.hpp"
-#include "patterns/patterns.hpp"
+#include "basics/basics.hpp"
+// #include "patterns/patterns.hpp"
 using namespace std;
 
 int main() {
@@ -23,7 +23,10 @@ int main() {
     // inverted_numbered_right_pyramid(5);
     // star_pyramid(5);
     // inverted_star_pyrmaid(5);
-    diamond_star(5);
+    // diamond_star(5);
+
+    // <=== STL ===>
+    stl();
 
     return 0;
 }
