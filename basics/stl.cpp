@@ -62,7 +62,7 @@ void explain_vectors() {
 
     cout << endl;
 
-    vector<int> v2(5, 10);
+    vector<int> v2{5, 10, 15, 20};
     for (int i: v2){
         cout << i << endl;
     }
@@ -70,6 +70,57 @@ void explain_vectors() {
     cout << endl;
 
     cout << v[1] << endl;
+
+    cout << endl;
+
+    // Delete
+    v2.erase(v2.begin()+1); // 10 (v2.begin() = 5)
+
+    for (int i: v2){
+        cout << i << endl;
+    }
+
+    // Insert
+    v2.insert(v2.begin(), 0);
+
+    cout << endl;
+
+    for (int i: v2){
+        cout << i << endl;
+    }
+}
+
+// STACK
+// Stack container follows LIFO (Last In First Out) order of insertion and deletion. 
+// It means that most recently inserted element is removed first and the first inserted element will be removed last.
+void explain_stack(){
+    // Declaring a stack
+    stack<int> st;
+
+    // Inserting elements in a stack
+    st.push(2); // {2}
+    st.push(3); // {3, 2}
+    st.push(4); // {4, 3, 2}
+    st.push(5); // {5, 4, 3, 2}
+    st.emplace(7); // {7, 5, 4, 3, 2}
+
+    cout << st.top() << endl; // top: the first element
+
+    st.pop(); // {5, 4, 3, 2} -> The top element is removed
+ 
+    cout << st.top() << endl;
+
+    // Size
+    cout << st.size() << endl;
+
+    cout << st.empty() << endl;
+
+    // Generic 3 functions in a stack: Push, Pop, Top
+
+    // Swap
+    stack<int>st1, st2;
+    st1.swap(st2);
+
 }
 
 
@@ -77,5 +128,12 @@ void explain_vectors() {
 void stl() {
     // Pairs
     // explain_pairs();
-    explain_vectors();
+
+    // Vectors
+    // explain_vectors();
+
+    // Lists and dequeue are exactly similar to vectors - same operations
+
+    // Stack
+    explain_stack();
 }
