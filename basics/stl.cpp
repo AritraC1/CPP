@@ -92,7 +92,7 @@ void explain_vectors() {
 
 // STACK
 // Stack container follows LIFO (Last In First Out) order of insertion and deletion. 
-// It means that most recently inserted element is removed first and the first inserted element will be removed last.
+// It means that the most recently inserted element is removed first and the first inserted element will be removed last.
 void explain_stack(){
     // Declaring a stack
     stack<int> st;
@@ -120,7 +120,27 @@ void explain_stack(){
     // Swap
     stack<int>st1, st2;
     st1.swap(st2);
+}
 
+// QUEUE
+// A queue is a container adapter that stores elements in FIFO (First In, First Out) order. 
+// It allows elements to be inserted from the back and removed from the front, ensuring the first inserted element is removed first.
+void explain_queue() {
+    queue<int> q;
+
+    q.push(2);
+    q.push(3);
+    q.push(4);
+    q.push(5);
+    q.emplace(6);
+
+    cout << "Front: " << q.front() << " Back: " << q.back() << endl;
+
+    q.pop();
+
+    cout << q.front();
+
+    // size, swap, and empty same as stack
 }
 
 
@@ -135,5 +155,8 @@ void stl() {
     // Lists and dequeue are exactly similar to vectors - same operations
 
     // Stack
-    explain_stack();
+    // explain_stack();
+
+    // Queue
+    explain_queue();
 }
