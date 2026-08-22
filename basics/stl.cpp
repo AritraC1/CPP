@@ -143,6 +143,123 @@ void explain_queue() {
     // size, swap, and empty same as stack
 }
 
+// PRIORITY QUEUE
+// A priority queue is an abstract data type similar to a regular queue, but with one key difference: each element in the priority queue is associated with a priority level, and elements are dequeued based on their priority rather than their arrival time. 
+// Higher priority elements are dequeued before lower priority ones.
+void explain_pq() {
+    priority_queue<int> pq;
+
+    // Max Heap
+    pq.push(2); // {2}
+    pq.push(4); // {4, 2}
+    pq.push(1); // {4, 2, 1}
+    pq.push(5); // {5, 4, 2, 1}
+    pq.emplace(3); // {5, 4, 3, 2, 1}
+
+    cout << "Top: " << pq.top() << endl;
+
+    // Min heap
+    priority_queue<int, vector<int>, greater<int>> pq1;
+    pq1.push(5); // {5}
+    pq1.push(2); // {2, 5}
+    pq1.push(8); // {2, 5, 8}
+    pq1.emplace(10); // {2, 5, 8, 10}
+
+    cout << "Top: " << pq1.top() << endl;
+
+    // push and pop - logn
+    // top - O(1)
+}
+
+// SET
+// A Set is a container which stores unique elements in some sorted order. It is an implementation of a Self-Balancing Binary Search Tree.
+// It does not allow duplicates, Search, insert, and delete in O(log n) time, Elements are always sorted in ascending order by default.
+void explain_set() {
+    // Creating an empty set
+    set<int> s1;
+
+    s1.insert(1);
+    s1.insert(2);
+    s1.emplace(5);
+    s1.emplace(4);
+    
+    // `it` is an iterator 
+    // auto it1 = s1.find(5);
+    // auto it2 = s1.find(8);
+
+    // erases 4
+    s1.erase(4);
+
+    int count = s1.count(8);
+    cout << "Count: " << count << endl;
+
+
+    // Initialize set with list 
+    set<int> s2 = {1, 2, 3, 2, 1}; 
+
+    for (int i : s2) {
+        cout << i << " ";
+    }
+
+    cout << endl;
+
+    // lower_bound() and upper_bound() function works in the same way as in vector
+    
+    auto it1 = s2.upper_bound(2);
+    auto it2 = s2.lower_bound(3);
+
+    // in SET, everything happens in a log(N) time complexity
+}
+
+// MULTISET
+// Multiset is an associative container similar to a set, but it can store multiple elements with the same value. 
+// It is sorted in increasing order by default, but it can be changed to any desired order using a custom comparator.
+void explain_multiset() {
+    multiset<int> mst;
+
+    mst.insert(1); // {1}
+    mst.insert(1); // {1, 1}
+    mst.insert(1); // {1, 1, 1}
+    mst.emplace(1); // {1, 1, 1, 1}
+
+    for (int i : mst) {
+        cout << i << " ";
+    }
+
+    cout << endl;
+
+    mst.erase(1); // erases all the 1s in the set
+
+    int count = mst.count(1);
+    cout << "Count: " << count << endl;
+
+    mst.emplace(2);
+    mst.emplace(2);
+    mst.emplace(2);
+
+    for (int i : mst) {
+        cout << i << " ";
+    }
+
+    cout << endl;
+
+    mst.erase(mst.find(2)); // only a single 2 is erased
+
+    for (int i : mst) {
+        cout << i << " ";
+    }
+
+    cout << endl;
+
+    // erase(start, end)
+    mst.erase(mst.find(2), next(mst.find(2), 2));
+
+    for (int i : mst) {
+        cout << i << " ";
+    }
+
+    // rest all functions are same as set
+}
 
 // STL (Standard Template Library)
 void stl() {
@@ -158,5 +275,14 @@ void stl() {
     // explain_stack();
 
     // Queue
-    explain_queue();
+    // explain_queue();
+
+    // Priority queue
+    // explain_pq();
+
+    // Set
+    // explain_set();
+
+    // Multiset
+    explain_multiset();
 }
