@@ -261,6 +261,61 @@ void explain_multiset() {
     // rest all functions are same as set
 }
 
+// UNORDERED SET
+// unordered_set is an unordered associative container that stores unique elements.
+// Internally uses a hashing to store elements which provides average constant time O(1) for insert, search and delete operations.
+// Elements have no particular order and are best used when fast access is more important than sorted order.
+void explain_unordered_set() {
+    unordered_set<int> us;
+
+    us.insert(2);
+    us.insert(3);
+    us.insert(1);
+    us.emplace(8);
+    us.emplace(2);
+
+    for (int i: us) {
+        cout << i << " ";
+    }
+
+    cout << endl;
+
+    cout << "Size: " << us.size() << endl;
+
+    // lower_bound and upper_bound functions do not work, rest works
+}
+
+// MAP
+// Maps are associative containers that store key–value pairs in sorted order using a self-balancing Red-Black Tree. 
+// They provide efficient O(log n) time complexity for insertion, deletion, and searching operations.
+// Maps do not allow duplicate keys.
+void explain_map() {
+    map<string, int> fruits;
+
+    fruits.insert({"Apple", 12});
+    fruits.insert({"mango", 20});
+    fruits.insert({"Banana", 7});
+
+    for (auto it: fruits) {
+        cout << it.first << " : " << it.second << endl;
+    }
+
+    cout << fruits["Apple"] << endl;
+
+    auto it = fruits.find("Banana");
+    cout << it->second << endl;
+
+    // lower_bound, upper_bound, erase, swap, size are same
+
+    // Multimap
+    // Key-value pairs with duplicate keys but in sorted order
+
+    // Unordered map
+    // Key-value with unique keys but stored in random order
+
+    // Map workes in log N, Unordered map works in O(1)
+}
+
 // STL (Standard Template Library)
 void stl() {
     // Pairs
@@ -284,5 +339,11 @@ void stl() {
     // explain_set();
 
     // Multiset
-    explain_multiset();
+    // explain_multiset();
+
+    // Unordered Set
+    // explain_unordered_set();
+
+    // map
+    explain_map();
 }
