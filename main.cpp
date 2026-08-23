@@ -1,6 +1,7 @@
 #include <iostream>
-#include "basics/basics.hpp"
+// #include "basics/basics.hpp"
 // #include "patterns/patterns.hpp"
+#include "maths/maths.hpp"
 using namespace std;
 
 int main() {
@@ -26,7 +27,16 @@ int main() {
     // diamond_star(5);
 
     // <=== STL ===>
-    stl();
+    // stl();
+
+    // <=== Maths ===>
+    int num = 1234;
+    
+    // int ans = count_all_digits(num);
+    // cout << "Count of digits in " << num << " is: " << ans << endl;
+
+    int ans = reverse_number(num);
+    cout << "Reverse of " << num << " is: " << ans << endl;
 
     return 0;
 }
