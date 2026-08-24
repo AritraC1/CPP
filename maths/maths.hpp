@@ -7,4 +7,4 @@ int count_all_digits(int n);
 int reverse_number(int num);
 
 // palindrome
-void palindrome(int num);
+bool check_palindrome(int num);
