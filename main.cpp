@@ -30,7 +30,7 @@ int main() {
     // stl();
 
     // <=== Maths ===>
-    int num = 121;
+    // int num = 121;
     
     // int ans = count_all_digits(num);
     // cout << "Count of digits in " << num << " is: " << ans << endl;
@@ -38,13 +38,16 @@ int main() {
     // int ans = reverse_number(num);
     // cout << "Reverse of " << num << " is: " << ans << endl;
 
-    int ans = check_palindrome(num);
-    if (ans) {
-        cout << "The number is a palindrome" << endl;
-    }
-    else {
-        cout << "The number is not a palindrome" << endl;
-    }
+    // int ans = check_palindrome(num);
+    // if (ans) {
+    //     cout << "The number is a palindrome" << endl;
+    // }
+    // else {
+    //     cout << "The number is not a palindrome" << endl;
+    // }
+
+    int ans = gcd(9, 12);
+    cout << "GCD: " << ans << endl;
 
     return 0;
 }

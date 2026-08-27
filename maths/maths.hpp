@@ -8,3 +8,6 @@ int reverse_number(int num);
 
 // palindrome
 bool check_palindrome(int num);
+
+// GCD (Greatest Common Division)
+int gcd(int a, int b);
