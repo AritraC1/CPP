@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-using namespace std;
 
 // Count all digits of a number
 int count_all_digits(int n);
@@ -18,7 +17,7 @@ int gcd(int a, int b);
 bool check_armstrong(int num);
 
 // All Divisors of a number
-vector<int> print_all_divisors(int num);
+std::vector<int> print_all_divisors(int num);
 
 // Prime number
 bool check_prime(int n);

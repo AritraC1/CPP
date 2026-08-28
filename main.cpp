@@ -1,13 +1,10 @@
 #include <iostream>
-#include "maths/maths.hpp"
+#include "dsa/recursion/recursion.hpp"
 using namespace std;
 
 int main() {
 
-    bool ans = check_prime(17);
-
-    if (ans) cout << "Prime" << endl;
-    else cout << "Not Prime" << endl;
+    print_name("Tony", 5);
 
     return 0;
 }
