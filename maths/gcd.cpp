@@ -1,6 +1,7 @@
 #include <iostream>
 #include <bits/stdc++.h> 
 #include "maths.hpp"
+
 using namespace std;
 
 // Function to find all factors (divisors) of a number

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include "maths.hpp"
+
 using namespace std;
 
 // Reverse a number
