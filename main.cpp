@@ -46,8 +46,12 @@ int main() {
     //     cout << "The number is not a palindrome" << endl;
     // }
 
-    int ans = gcd(9, 12);
-    cout << "GCD: " << ans << endl;
+    // int ans = gcd(9, 12);
+    // cout << "GCD: " << ans << endl;
+
+    bool ans = check_armstrong(153);
+    if (ans) cout << "The number is an armstrong" << endl;
+    else cout << "The number is not an armstrong" << endl;
 
     return 0;
 }

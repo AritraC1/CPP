@@ -11,3 +11,6 @@ bool check_palindrome(int num);
 
 // GCD (Greatest Common Division)
 int gcd(int a, int b);
+
+// Armstrong Number
+bool check_armstrong(int num);
