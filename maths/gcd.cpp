@@ -3,6 +3,7 @@
 #include "maths.hpp"
 using namespace std;
 
+// Function to find all factors (divisors) of a number
 vector<int> factors(int num) {
     vector<int> fac;
 
@@ -16,10 +17,15 @@ vector<int> factors(int num) {
     return fac;
 }
 
+// Function to find the Greatest Common Divisor (GCD) of two numbers
 int gcd(int a, int b) {
+    // Find all factors of a
     vector<int> fac_a = factors(a);
+
+    // Find all factors of b
     vector<int> fac_b = factors(b);
 
+    // Set to store common factors
     set<int> common_factors;
 
     for (size_t i = 0; i<fac_a.size(); i++){
@@ -30,10 +36,11 @@ int gcd(int a, int b) {
         }
     }
 
+    // If common factors were found, rbegin() points to the largest common factor
     if (!common_factors.empty()) {
         return *common_factors.rbegin();
     }
 
+    // Return 1 as the default GCD
     return 1;
-
 }

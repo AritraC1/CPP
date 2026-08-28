@@ -16,6 +16,7 @@ int reverse(int num){
 }
 
 // Palindrome number
+// A palindrome reads the same forwards and backwards
 bool check_palindrome(int num) {
     if (num != reverse(num)) {
         return false;
