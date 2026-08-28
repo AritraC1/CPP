@@ -20,3 +20,6 @@ bool check_armstrong(int num);
 // All Divisors of a number
 vector<int> print_all_divisors(int num);
 
+// Prime number
+bool check_prime(int n);
+

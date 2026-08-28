@@ -3,13 +3,11 @@
 using namespace std;
 
 int main() {
-    vector<int> ans = print_all_divisors(36);
 
-    for (int i: ans) {
-        cout << i << " ";
-    }
+    bool ans = check_prime(17);
 
-    cout << endl;
+    if (ans) cout << "Prime" << endl;
+    else cout << "Not Prime" << endl;
 
     return 0;
 }
