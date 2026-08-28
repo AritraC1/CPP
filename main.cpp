@@ -1,10 +1,15 @@
 #include <iostream>
+#include <vector>
 #include "dsa/recursion/recursion.hpp"
+
 using namespace std;
 
 int main() {
+    vector<int> ans = fibonacci(6);
 
-    print_name("Tony", 5);
+    for (int i: ans) {
+        cout << i << " ";
+    }
 
     return 0;
 }
