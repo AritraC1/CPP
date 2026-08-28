@@ -1,12 +1,12 @@
 # DSA Roadmap
 
 ## Phase 0 — C++ Refresher
-- [ ] Loops, functions, pointers/references (just enough comfort, not mastery)
-- [ ] Pass-by-value vs pass-by-reference
-- [ ] STL: `vector`, `pair`
-- [ ] STL: `map` / `unordered_map`, `set` / `unordered_set`
-- [ ] STL: `queue`, `stack`, `priority_queue`, `deque`
-- [ ] Built-ins: `sort()`, `lower_bound()`, `upper_bound()`, basic string functions
+- [x] Loops, functions, pointers/references (just enough comfort, not mastery)
+- [x] Pass-by-value vs pass-by-reference
+- [x] STL: `vector`, `pair`
+- [x] STL: `map` / `unordered_map`, `set` / `unordered_set`
+- [x] STL: `queue`, `stack`, `priority_queue`, `deque`
+- [x] Built-ins: `sort()`, `lower_bound()`, `upper_bound()`, basic string functions
 
 ## Phase 1 — Foundations
 - [ ] Time & Space Complexity (Big-O, how to analyze your own code)
