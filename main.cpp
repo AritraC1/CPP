@@ -1,15 +1,8 @@
-#include <iostream>
-#include <vector>
-#include "dsa/recursion/recursion.hpp"
-
-using namespace std;
+#include "dsa/hashing/hashing.hpp"
 
 int main() {
-    vector<int> ans = fibonacci(6);
 
-    for (int i: ans) {
-        cout << i << " ";
-    }
+    count_frequency(5);
 
     return 0;
 }
