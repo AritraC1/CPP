@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Count frequency of each element in the array
 void count_frequency(int n) {
     // Array declared
     int arr[n];
@@ -14,11 +15,12 @@ void count_frequency(int n) {
     // Map
     unordered_map<int, int> map;
 
+    // Count frequencies of all elements
     for (int i = 0; i<n; i++) {
         map[arr[i]]++;
     }
 
-    // print element with freq
+    // traverse the map and print element with freq
     for (auto it : map) {
         int ele = it.first;
         int freq = it.second;
