@@ -1,22 +1,22 @@
-#include "oop/my_class.hpp"
+#include <iostream>
+#include <vector>
+#include "dsa/sorting/sorting.hpp"
 
 int main() {
+    std::vector<int> arr = {13, 46, 24, 52, 20, 9};
+    std::vector<int> ans = selection_sort(arr);
 
-    // Create an object named 'profile'.
-    MyClass profile (
-        "Tony",
-        33,
-        {"Cycling", "Shooting", "Reading"}
-    );
+    std::cout << "Original Array: ";
+    for (const int i: arr) {
+        std::cout << i  << " ";
+    }
 
-    // Call a public member function of the object.
-    // This will print all details stored in 'profile'.
-    profile.display_details(); 
+    std::cout << std::endl;
 
-    // Copy constructor
-    MyClass old_profile = profile;
+    std::cout << "Sorted Array: ";
+    for (const int i: ans) {
+        std::cout << i  << " ";
+    }
 
-    old_profile.display_details();
-
-    return 0;
+    std::cout << std::endl;
 }
