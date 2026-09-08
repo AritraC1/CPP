@@ -3,8 +3,10 @@
 
 #include "utils/utils.hpp"
 
+using namespace std;
+
 // Selection sort
-std::vector<int> selection_sort(std::vector<int> arr) {
+vector<int> selection_sort(vector<int> arr) {
 
     for (int i = 0; i < arr.size(); i++) {
 

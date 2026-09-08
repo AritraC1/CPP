@@ -2,21 +2,23 @@
 #include <vector>
 #include "dsa/sorting/sorting.hpp"
 
+using namespace std;
+
 int main() {
-    std::vector<int> arr = {13, 46, 24, 52, 20, 9};
-    std::vector<int> ans = selection_sort(arr);
+    vector<int> arr = {13, 46, 24, 52, 20, 9};
+    vector<int> ans = selection_sort(arr);
 
-    std::cout << "Original Array: ";
+    cout << "Original Array: ";
     for (const int i: arr) {
-        std::cout << i  << " ";
+        cout << i  << " ";
     }
 
-    std::cout << std::endl;
+    cout << endl;
 
-    std::cout << "Sorted Array: ";
+    cout << "Sorted Array: ";
     for (const int i: ans) {
-        std::cout << i  << " ";
+        cout << i  << " ";
     }
 
-    std::cout << std::endl;
+    cout << endl;
 }
