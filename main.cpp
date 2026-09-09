@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
     vector<int> arr = {13, 46, 24, 52, 20, 9};
-    vector<int> ans = selection_sort(arr);
+    vector<int> ans = insertion_sort(arr);
 
     cout << "Original Array: ";
     for (const int i: arr) {
