@@ -9,7 +9,9 @@ using namespace std;
 // Takes an element and place it in ots correct order
 vector<int> insertion_sort(vector<int> arr) {
 
-    for (int i = 1; i < arr.size(); i++) {
+    int n = arr.size();
+
+    for (int i = 1; i < n; i++) {
 
         int key = arr[i];
         int j = i - 1;

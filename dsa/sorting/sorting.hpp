@@ -3,7 +3,7 @@
 #include <vector>
 
 // selection sort
-std::vector<int> selection_sort(std::vector<int> arr);
+void selection_sort(std::vector<int>& arr);
 
 // Bubble sort
 void bubble_sort(std::vector<int>& arr);

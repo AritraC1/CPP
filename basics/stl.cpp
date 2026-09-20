@@ -43,7 +43,7 @@ void explain_vectors() {
     // while push_back() usually creates it first and then moves/copies it in.
 
     // Traditional way of printing a vector
-    for (int i = 0; i<v.size(); i++) {
+    for (size_t i = 0; i<v.size(); i++) {
         cout << v[i] << endl;
     }
 
@@ -207,7 +207,10 @@ void explain_set() {
     // lower_bound() and upper_bound() function works in the same way as in vector
     
     auto it1 = s2.upper_bound(2);
+    cout << *it1 << endl;
+
     auto it2 = s2.lower_bound(3);
+    cout << *it2 << endl;
 
     // in SET, everything happens in a log(N) time complexity
 }

@@ -7,10 +7,17 @@ using namespace std;
 int count_all_digits(int n) {
     int count = 0;
 
-    while (n > 0) {
-        // Get the last digit of the number (% to get the reminder)
-        int temp = n % 10;
+    // Special case: 0 has one digit
+    if (n == 0) {
+        return 1;
+    }
 
+    // Special case: Handle negative numbers
+    if (n < 0) {
+        n = -n;
+    }
+
+    while (n > 0) {
         // Increase the digit count
         count++;
 
