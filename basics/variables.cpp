@@ -1,10 +1,13 @@
 #include <iostream>
+#include <string>
 #include <typeinfo>
 #include "basics.hpp"
 
 using namespace std;
 
-// Variables
+// VARIABLES
+// A variable has an address in memory where they are bound to.
+// A variable has a type and it stores value
 void variables() {
     // int
     int a = 5;
@@ -43,4 +46,44 @@ void variables() {
     char ch = 'o';
     cout << ch;
 
+    // CONST
+    // `const` there value cannot change once declared
+
+    // Types of constants
+
+    // literal constant
+    int age = 20;
+    string name = "John";
+    cout << name << " is " << age << " years old." << endl;
+    
+    // Declared constant (const keyword)
+    const double pi = 3.14;
+    // pi = 3; compiler error
+    cout << "Value of Pi:" << pi << endl;
+    
+    // Constant expression (constexpr keyword)
+    // A constant expression is an expression whose value can be determined at compile time.
+    constexpr int x = 10;
+    constexpr int y = 20;
+    constexpr int sum = x + y;
+    cout << "Sum is = " << sum << endl;
+
+    // Note: const → value cannot be changed. | constexpr → value can be determined at compile time.
+    
+    // Enumerated constants (enum keyword)
+    enum Day {
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        SUNDAY
+    };
+    Day today = WEDNESDAY;
+    cout << "Today is: " << today << endl;
+    
+    // Define costants (#define)
+    // #define months 12; 
+    // cout << "Number of months:" << months << endl; dont use defined constants in modern c++
 }
