@@ -16,6 +16,17 @@ void findEvenNumbers(int num);
 void numbers(int num);
 void odd(int num);
 
+// Pass by reference and Pass by value in function
+void change_number(int &x);
+void change_pass_by_value(int x);
+void change_pass_by_reference(int &x);
+
+// Overloading function
+int add_numbers(int a, int b);
+double add_numbers(double a, double b);
+
+// Pointers
+void pointers();
+
 // STL
 void stl();
-
