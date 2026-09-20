@@ -33,8 +33,8 @@ void pointers() {
 
         This is read right to left: int_ptr is pointer to integer
 
-        In CPP, its very important that you always initialize all pointer variables
-        before you use them, if not initialized it will have a garbage data -> unitialized pointers point anywhere
+        In CPP, its very important that you always initialize all pointer variables before you use them. 
+        If not initialized it will have a garbage data -> unitialized pointers point anywhere
     */
 
     // Declaring a pointer as a null pointer -> to point nowhere
