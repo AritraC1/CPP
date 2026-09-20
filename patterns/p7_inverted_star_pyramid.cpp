@@ -12,6 +12,7 @@ Pattern 7: Inverted Star Pyramid
 
 #include <iostream>
 #include "patterns.hpp"
+
 using namespace std;
 
 void inverted_star_pyrmaid(int n) {

@@ -12,6 +12,7 @@ Pattern 2: Right-Angled Triangle
 
 #include <iostream>
 #include "patterns.hpp"
+
 using namespace std;
 
 void right_angled_triangle(int n) {

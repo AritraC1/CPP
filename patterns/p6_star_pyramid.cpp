@@ -12,6 +12,7 @@ Pattern 6: Star Pyramid
 
 #include <iostream>
 #include "patterns.hpp"
+
 using namespace std;
 
 void star_pyramid(int n) {

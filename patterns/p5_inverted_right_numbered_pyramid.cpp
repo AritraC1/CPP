@@ -12,6 +12,7 @@ Pattern 5: Inverted Numbered Right Pyramid
 
 #include <iostream>
 #include "patterns.hpp"
+
 using namespace std;
 
 void inverted_numbered_right_pyramid(int n) {

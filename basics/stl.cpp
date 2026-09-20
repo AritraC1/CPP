@@ -1,5 +1,6 @@
 #include <bits/stdc++.h> // only works with gcc
 #include "basics.hpp"
+
 using namespace std;
 
 // PAIRS

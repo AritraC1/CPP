@@ -18,6 +18,7 @@ Pattern 8: Diamond Star Pattern
 
 #include <iostream>
 #include "patterns.hpp"
+
 using namespace std;
 
 void upper_half(int n) {
