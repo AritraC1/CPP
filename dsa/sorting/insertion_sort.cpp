@@ -7,11 +7,10 @@ using namespace std;
 
 // Insertion sort
 // Takes an element and place it in ots correct order
-vector<int> insertion_sort(vector<int> arr) {
-
+void insertion_sort(vector<int>& arr) {
     int n = arr.size();
 
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < n; ++i) {
 
         int key = arr[i];
         int j = i - 1;
@@ -25,6 +24,4 @@ vector<int> insertion_sort(vector<int> arr) {
         // Insert key at its correct position
         arr[j + 1] = key;
     }
-
-    return arr;
 }
