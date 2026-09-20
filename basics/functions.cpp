@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 // Pass by reference
 // Pass by reference means a function receives a reference to the original variable, so changes made inside the function affect the original variable.
 void change_number(int &x) {
@@ -7,6 +11,7 @@ void change_number(int &x) {
 // Pass by value
 void change_pass_by_value(int x) {
     x = 100;
+    cout << x << endl;
 }
 
 // Pass by reference
