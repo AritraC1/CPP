@@ -22,3 +22,6 @@ std::vector<int> print_all_divisors(int num);
 // Prime number
 bool check_prime(int n);
 
+// Binary addition
+void binary_addition(int& a, int& b);
+
