@@ -24,3 +24,6 @@ void inverted_star_pyrmaid(int n);
 
 // Pattern 8: Diamond Star
 void diamond_star(int n);
+
+// Pattern 9: Half Diamond (Vertically)
+void half_diamond(int n);

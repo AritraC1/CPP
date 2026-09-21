@@ -21,7 +21,7 @@ Pattern 8: Diamond Star Pattern
 
 using namespace std;
 
-void upper_half(int n) {
+static void upper_half(int n) {
     for (int i = 0; i < n; i++) {
 
         // spaces
@@ -38,7 +38,7 @@ void upper_half(int n) {
     }
 }
 
-void lower_half(int n) {
+static void lower_half(int n) {
     for (int i = n - 1; i >= 0; i--) {
 
         // spaces
