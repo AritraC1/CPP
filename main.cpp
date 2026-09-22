@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 
-#include "patterns/patterns.hpp"
+#include "maths/maths.hpp"
+
 
 using namespace std;
 
 int main() {
-    half_diamond(4);
+    int ans = pascals_triangle_1(5, 3);
+    cout << ans << endl;
 }

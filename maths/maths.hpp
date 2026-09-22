@@ -25,3 +25,5 @@ bool check_prime(int n);
 // Binary addition
 void binary_addition(int& a, int& b);
 
+// 
+int pascals_triangle_1(int r, int c);

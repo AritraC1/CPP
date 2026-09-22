@@ -27,3 +27,6 @@ void diamond_star(int n);
 
 // Pattern 9: Half Diamond (Vertically)
 void half_diamond(int n);
+
+// Pattern 10: Binary Right Angled Triangle
+void binary_right_angled_triangle(int n);
