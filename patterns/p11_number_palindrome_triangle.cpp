@@ -33,7 +33,6 @@ void number_palindrome_triangle(int n) {
             cout << j;
         }
 
-
         cout << endl;
         
     }
