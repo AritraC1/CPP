@@ -30,3 +30,6 @@ void half_diamond(int n);
 
 // Pattern 10: Binary Right Angled Triangle
 void binary_right_angled_triangle(int n);
+
+// Pattern 11: Number Palindrome Triangle
+void number_palindrome_triangle(int n);

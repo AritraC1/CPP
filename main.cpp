@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
 
-#include "maths/maths.hpp"
+// #include "maths/maths.hpp"
+#include "patterns/patterns.hpp"
 
 
 using namespace std;
 
 int main() {
-    int ans = pascals_triangle_1(5, 3);
-    cout << ans << endl;
+    number_palindrome_triangle(5);
 }
