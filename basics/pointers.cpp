@@ -154,4 +154,102 @@ void pointers() {
     new_ptr = nullptr;
 
     // delete frees the memory, but the pointer still holds the old address, so set new_ptr = nullptr afterward to avoid a dangling pointer.
+
+    cout << "---------"  << endl;
+
+    // Pointer Arithmetic
+    // Pointers can be used in Assignment, arithmetic, and comparison expressions
+    // It only makes sense with raw arrays - very powerful way to manipulate them
+
+    int arr[] = {10, 20, 30, 40, 50};
+
+    int* ptr = arr;  // points to first element
+    cout << *ptr << endl;
+
+    // ++ and -- increments and decrements pointer
+    ptr++;                       // move to next element
+    cout << *ptr << endl;       // 20
+
+    ptr++;                       // move to next element
+    cout << *ptr << endl;       // 30
+
+    ptr--;                       // move backward
+    cout << *ptr << endl;       // 20
+
+    // + → pointer moves forward
+    ptr = ptr + 2;               // move forward by 2 elements
+    cout << *ptr << endl;       // 40
+
+    // - → pointer moves backward
+    ptr = ptr - 1;               // move backward by 1 element
+    cout << *ptr << endl;       // 30
+
+    // Note: Pointer arithmetic moves by elements, not individual bytes.
+    // If an int takes 4 bytes, ptr + 1 means "move to the next int",
+    // not "move forward by 1 byte."
+
+    // Comparing two pointers == and !=
+    // Determine if two pointers point to the same location, does NOT compare the data where they point!
+
+    string s1 {"Frank"};
+    string s2 {"Frank"};
+    string s3 {"Prince"};
+
+    string* pt1 {&s1};
+    string* pt2 {&s2};
+    string* pt3 {&s1};
+    string* pt4 {&s3}; 
+
+    cout << (pt1 == pt2) << endl;    // false
+    cout << (pt1 == pt3) << endl;    // true
+
+    // pt1 == pt2 → checks whether pt1 and pt2 contain the same address.
+    // pt1 == pt3 → checks whether pt1 and pt3 contain the same address.
+
+    // It does not compare "Frank" with "Frank".
+
+    // Comparing the data pointers
+    cout << (*pt1 == *pt2) << endl; // true
+    cout << (*pt1 == *pt4) << endl; // false
+
+    cout << "---------"  << endl;
+
+    // Constants and Pointers
+    // There are several ways to qualify pointers using const - Pointers to constants, constant pointers, constant pointers to constants
+
+    // Pointers to constants
+    // The data pointed to by the pointers is constant and cannot be changed. The pointer itself can change and point somewhere else.
+
+    int high_score {100};
+    int low_score {65};
+    const int* score_ptr {&high_score};
+
+    *score_ptr = 86;      // ERROR
+    score_ptr = &low_score; // OK
+
+    // Constant pointers
+    // The data pointed to by the pointers can be changed. The pointer itself cannot change and point somewhere else.
+    int high_score {100};
+    int low_score {65};
+    int* const score_ptr { &high_score };
+
+    *score_ptr = 86;          // OK
+    score_ptr = &low_score;   // ERROR
+
+    // Constant pointers to constants
+    // The data pointed to by the pointer is constant and cannot be changed. The pointer itself cannot change and point somewhere else.
+    int high_score {100};
+    int low_score {65};
+    const int* const score_ptr { &high_score };
+
+    *score_ptr = 86;           // ERROR
+    score_ptr = &low_score;    // ERROR
+
+    cout << "---------"  << endl;
+
+    // Passing pointers to a function (pass by reference with pointer parameters)
+
+
+
+
 }
