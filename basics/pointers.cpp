@@ -20,6 +20,16 @@ Why use a pointer?
 
 */
 
+// Pass by pointer
+void double_data(int* int_ptr) {
+        *int_ptr *= 2;
+};
+
+// Pass by reference
+void doub(int& value) {
+    value *= 2;
+}
+
 void pointers() {
     // Declaring pointers
     // variable_type *pointer_name; (It can also be written as `variable_type* pointer_name`)
@@ -220,36 +230,74 @@ void pointers() {
     // Pointers to constants
     // The data pointed to by the pointers is constant and cannot be changed. The pointer itself can change and point somewhere else.
 
-    int high_score {100};
-    int low_score {65};
-    const int* score_ptr {&high_score};
+    int high_marks {100};
+    int low_marks {65};
+    // const int* marks_ptr {&high_marks};
 
-    *score_ptr = 86;      // ERROR
-    score_ptr = &low_score; // OK
+    // *marks_ptr = 86;      // ERROR
+    marks_ptr = &low_marks; // OK
 
     // Constant pointers
     // The data pointed to by the pointers can be changed. The pointer itself cannot change and point somewhere else.
-    int high_score {100};
-    int low_score {65};
-    int* const score_ptr { &high_score };
+    int high_point {100};
+    int low_point {65};
+    int* const point_ptr { &high_point };
 
-    *score_ptr = 86;          // OK
-    score_ptr = &low_score;   // ERROR
+    *point_ptr = 86;          // OK
+    // point_ptr = &low_point;   // ERROR
 
     // Constant pointers to constants
     // The data pointed to by the pointer is constant and cannot be changed. The pointer itself cannot change and point somewhere else.
-    int high_score {100};
-    int low_score {65};
-    const int* const score_ptr { &high_score };
+    int high_runs {100};
+    int low_runs {65};
+    const int* const runs_ptr { &high_runs };
 
-    *score_ptr = 86;           // ERROR
-    score_ptr = &low_score;    // ERROR
+    // *runs_ptr = 86;           // ERROR
+    // runs_ptr = &low_runs;    // ERROR
+
+    cout << "---------"  << endl;
+
+    // Pass by pointer
+
+    int value {10};
+    cout << "Value: " << value << endl; // 10
+
+    double_data(&value);
+
+    cout << "Value: " << value << endl; // 20
 
     cout << "---------"  << endl;
 
     // Passing pointers to a function (pass by reference with pointer parameters)
 
+    int num {10};
+    doub(num);
+    cout << "Num: " << num << endl; // 20
 
+    cout << "---------"  << endl;
 
+    // l-values and r-values
+
+    // l-values
+    // values that have names and are addressable
+    // modifiable if they are not constants
+
+    int x {100};    // x is an l-value
+    x = 1000;
+    x = 1000 + 20;
+
+    string name;    // name is an l-value
+    name = "Frank";
+
+    // r-value (non-addressable and non-assignable)
+    // A value that's not an l-value: on the right-hand side of an assignment expression, a literal, a temporary which is intended to be non-modifiable
+
+    int x {100};                    // 100 is an r-value
+    int y = x + 200;                // (x + 200) is an r-value
+
+    string name;
+    name = "Frank";                 // "Frank" is an r-value
+
+    int max_num = max(20, 30);      // max(20, 30) is an r-value
 
 }
