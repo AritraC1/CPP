@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 #include "basics.hpp"
 
 using namespace std;
@@ -22,8 +23,8 @@ Why use a pointer?
 
 // Pass by pointer
 void double_data(int* int_ptr) {
-        *int_ptr *= 2;
-};
+    *int_ptr *= 2;
+}
 
 // Pass by reference
 void doub(int& value) {
@@ -153,7 +154,7 @@ void pointers() {
     new_ptr = new int; // allocate an integer on the heap
 
     cout << new_ptr << endl;
-    cout << *new_ptr << endl;
+    // cout << *new_ptr << endl; // reading memory from `new int` before assigning is undefined behaviour (garbage value)
 
     *new_ptr = 200;
 
@@ -232,10 +233,13 @@ void pointers() {
 
     int high_marks {100};
     int low_marks {65};
-    // const int* marks_ptr {&high_marks};
 
-    // *marks_ptr = 86;      // ERROR
-    marks_ptr = &low_marks; // OK
+    const int* const_marks_ptr {&high_marks};
+    cout << *const_marks_ptr << endl; // 100
+
+    // *const_marks_ptr = 86;      // ERROR
+    const_marks_ptr = &low_marks; // OK
+    cout << *const_marks_ptr << endl; // 65
 
     // Constant pointers
     // The data pointed to by the pointers can be changed. The pointer itself cannot change and point somewhere else.
@@ -245,6 +249,7 @@ void pointers() {
 
     *point_ptr = 86;          // OK
     // point_ptr = &low_point;   // ERROR
+    cout << *point_ptr << " (low_point is " << low_point << ")" << endl; // 86
 
     // Constant pointers to constants
     // The data pointed to by the pointer is constant and cannot be changed. The pointer itself cannot change and point somewhere else.
@@ -254,6 +259,7 @@ void pointers() {
 
     // *runs_ptr = 86;           // ERROR
     // runs_ptr = &low_runs;    // ERROR
+    cout << *runs_ptr << " (low_runs is " << low_runs << ")" << endl; // 100
 
     cout << "---------"  << endl;
 
@@ -268,36 +274,43 @@ void pointers() {
 
     cout << "---------"  << endl;
 
-    // Passing pointers to a function (pass by reference with pointer parameters)
+    // Pass by reference (for comparison with pass by pointer above)
 
-    int num {10};
-    doub(num);
-    cout << "Num: " << num << endl; // 20
+    int number {10};
+    doub(number);
+    cout << "Number: " << number << endl; // 20
 
     cout << "---------"  << endl;
 
     // l-values and r-values
+    // each example is wrapped in its own { } block so names like x and name can be reused without redeclaration errors
 
     // l-values
     // values that have names and are addressable
     // modifiable if they are not constants
+    {
+        int x {100};    // x is an l-value
+        x = 1000;
+        x = 1000 + 20;
 
-    int x {100};    // x is an l-value
-    x = 1000;
-    x = 1000 + 20;
+        string name;    // name is an l-value
+        name = "Frank";
 
-    string name;    // name is an l-value
-    name = "Frank";
+        cout << x << " " << name << endl;
+    }
 
     // r-value (non-addressable and non-assignable)
     // A value that's not an l-value: on the right-hand side of an assignment expression, a literal, a temporary which is intended to be non-modifiable
+    {
+        int x {100};                    // 100 is an r-value
+        int y = x + 200;                // (x + 200) is an r-value
 
-    int x {100};                    // 100 is an r-value
-    int y = x + 200;                // (x + 200) is an r-value
+        string name;
+        name = "Frank";                 // "Frank" is an r-value
 
-    string name;
-    name = "Frank";                 // "Frank" is an r-value
+        int max_num = max(20, 30);      // max(20, 30) is an r-value
 
-    int max_num = max(20, 30);      // max(20, 30) is an r-value
+        cout << y << " " << name << " " << max_num << endl;
+    }
 
 }
