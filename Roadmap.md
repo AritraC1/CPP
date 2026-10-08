@@ -9,8 +9,8 @@
 - [x] Built-ins: `sort()`, `lower_bound()`, `upper_bound()`, basic string functions
 
 ## Phase 1 — Foundations
-- [ ] Time & Space Complexity (Big-O, how to analyze your own code)
-- [ ] Arrays — basics, traversal, in-place modification
+- [x] Time & Space Complexity (Big-O, how to analyze your own code)
+- [x] Arrays — basics, traversal, in-place modification
 - [ ] Two Pointers pattern
 - [ ] Sliding Window pattern
 - [ ] Prefix Sum pattern
