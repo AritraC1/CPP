@@ -4,9 +4,8 @@
 using namespace std;
 
 int main() {
-    int arr[] = {3, 2, 1, 3, 2};
-    int n = 5;
+    int arr[] = {1, 2, 4, 7, 7, 5};
+    int n = 6;
 
-    int ans = largest_element_in_array(arr, n);
-    cout << "largest element: " << ans << endl;
+    check_sorted(arr, n);
 }

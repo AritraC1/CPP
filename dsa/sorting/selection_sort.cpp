@@ -21,6 +21,6 @@ void selection_sort(vector<int>& arr) {
         }
 
         // Swap actual elements in arr
-        swap(arr[i], arr[minIndex]);
+        Utils::swap(arr[i], arr[minIndex]);
     }
 }

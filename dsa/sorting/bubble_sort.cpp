@@ -16,7 +16,7 @@ void bubble_sort(vector<int>& arr) {
         for (int j = 0; j < n - i - 1; j++) {
 
             if (arr[j] > arr[j + 1]) {
-                swap(arr[j], arr[j + 1]);
+                Utils::swap(arr[j], arr[j + 1]);
                 swapped = true;
             }
         }
