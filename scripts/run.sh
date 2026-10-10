@@ -20,7 +20,8 @@ else
 fi
 
 STD="c++17"
-OUT="main"
+BUILD_DIR="build"
+OUT="$BUILD_DIR/main"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 cd "$ROOT"
@@ -28,8 +29,10 @@ cd "$ROOT"
 # ---- functions ----
 
 build() {
+    mkdir -p "$BUILD_DIR"
+
     # Find every .cpp file in the project (skip build output dirs)
-    SOURCES=$(find . -name "*.cpp" -not -path "./build/*")
+    SOURCES=$(find . -name "*.cpp" -not -path "./$BUILD_DIR/*")
 
     echo "Compiling with $CXX (-std=$STD):"
     # echo "$SOURCES" | sed 's/^/  /'
@@ -47,9 +50,9 @@ run() {
 }
 
 clean() {
-    if [ -f "$OUT" ]; then
-        rm -f "$OUT"
-        echo "Removed ./$OUT"
+    if [ -d "$BUILD_DIR" ]; then
+        rm -rf "$BUILD_DIR"
+        echo "Removed ./$BUILD_DIR"
     else
         echo "Nothing to clean"
     fi
