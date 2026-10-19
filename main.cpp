@@ -1,11 +1,21 @@
 #include <iostream>
 #include "dsa/arrays/arrays_.hpp"
+#include "utils/utils.hpp"
 
 using namespace std;
 
 int main() {
     int arr[] = {1, 2, 4, 7, 7, 5};
-    int n = 6;
+    int len = 6;
+    int n = 2;
 
-    check_sorted(arr, n);
+    cout << "Original Array: " << endl;
+    Utils::print_arrays(arr, len);
+
+    left_array(arr, len, n);
+
+    cout << "\nRotated Array by " << n << " places: " << endl;
+    Utils::print_arrays(arr, len);
+
+    return 0;
 }

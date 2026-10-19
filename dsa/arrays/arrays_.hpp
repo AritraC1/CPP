@@ -11,3 +11,9 @@ void check_sorted(int arr[], int n);
 
 // Removing duplicates in place from sorted
 void remove_duplicates_in_place_from_sorted(int arr[], int n);
+
+// Left rotate the array by n places
+void left_array(int arr[], int len, int n);
+
+// right rotatae the array by n places
+
