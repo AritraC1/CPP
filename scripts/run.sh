@@ -3,6 +3,7 @@
 # Usage:
 #   ./scripts/run.sh          build + run
 #   ./scripts/run.sh build    build only
+#   ./scripts/run.sh debug    build with debug symbols
 #   ./scripts/run.sh clean    remove build artifacts
 
 set -euo pipefail
@@ -49,6 +50,18 @@ run() {
     "./$OUT"
 }
 
+debug_build() {
+    mkdir -p "$BUILD_DIR/debug"
+    local debug_out="$BUILD_DIR/debug/main"
+    local sources
+    sources=$(find . -name "*.cpp" -not -path "./$BUILD_DIR/*")
+
+    echo "Compiling with $CXX (-std=$STD -g -O0):"
+    $CXX -std="$STD" -g -O0 -fno-omit-frame-pointer -I. -Wall -Wextra $sources -o "$debug_out"
+
+    echo "Debug build succeeded -> ./$debug_out"
+}
+
 clean() {
     if [ -d "$BUILD_DIR" ]; then
         rm -rf "$BUILD_DIR"
@@ -66,6 +79,9 @@ case "$MODE" in
     build)
         build
         ;;
+    debug)
+        debug_build
+        ;;
     run)
         run
         ;;
@@ -74,7 +90,7 @@ case "$MODE" in
         ;;
     *)
         echo "Unknown option: $MODE"
-        echo "Usage: $0 [build|run|clean]"
+        echo "Usage: $0 [build|debug|run|clean]"
         exit 1
         ;;
 esac

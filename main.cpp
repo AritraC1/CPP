@@ -12,9 +12,9 @@ int main() {
     cout << "Original Array: " << endl;
     Utils::print_arrays(arr, len);
 
-    left_array(arr, len, n);
+    right_array(arr, len, n);
 
-    cout << "\nRotated Array by " << n << " places: " << endl;
+    cout << "\nRight rotated Array by " << n << " places: " << endl;
     Utils::print_arrays(arr, len);
 
     return 0;

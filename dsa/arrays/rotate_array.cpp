@@ -20,4 +20,17 @@ void left_array(int arr[], int len, int n) {
 }
 
 // Right rotate the array by n places (No new array)
-// void right_array(int arr[], int len, int n) {}
+void right_array(int arr[], int len, int n) {
+    if (len == 0) return;
+
+    n = n % len;
+
+    // Reverse the last n elements
+    Utils::reverse_array(arr, n-1, n-1);
+
+    // Reverse the remaining elements
+    Utils::reverse_array(arr, n, n-1);
+    
+    // Reverse the entire array
+    Utils::reverse_array(arr, n-1, n-1);
+}

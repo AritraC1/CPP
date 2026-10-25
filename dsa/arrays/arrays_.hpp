@@ -16,4 +16,5 @@ void remove_duplicates_in_place_from_sorted(int arr[], int n);
 void left_array(int arr[], int len, int n);
 
 // right rotatae the array by n places
+void right_array(int arr[], int len, int n);
 

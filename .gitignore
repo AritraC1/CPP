@@ -1,8 +1,11 @@
 # macOS system files
 .DS_Store
 
-# Visual Studio Code settings
-.vscode/
+# Keep shareable VS Code debugger setup; ignore personal settings
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
 
 # Main executable or output file
 main
