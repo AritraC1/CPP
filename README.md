@@ -9,18 +9,33 @@ It includes:
 - Competitive Programming (CP)
 - Coding challenges from platforms like LeetCode.
 
+## Building and running projects
+
+The repository contains independent C++ programs. Build one target at a time
+instead of compiling every `.cpp` file together:
+
+```bash
+./scripts/run.sh                                 # Build and run cpp-learning
+./scripts/run.sh student-management-system       # Build and run the student app
+./scripts/run.sh student-management-system build
+./scripts/run.sh student-management-system debug
+./scripts/run.sh clean
+```
+
+CMake keeps each executable's source files and include paths separate. Build
+outputs go under `build/cmake/`; install CMake and a C++17 compiler first. The
+`cpp-learning` target uses GCC because its examples include GCC's
+`<bits/stdc++.h>` header. The student management system can use GCC or Clang.
+
 ## Debugging in VS Code (macOS)
 
 Install the **CodeLLDB** extension (`vadimcn.vscode-lldb`) and open this repository
-as the VS Code workspace. The project includes a launch configuration that builds
-all `.cpp` files with debug symbols and starts the program when you press **F5**.
+as the VS Code workspace. Choose **Debug cpp-learning (LLDB)** or
+**Debug student-management-system (LLDB)** from the Run and Debug menu. Each
+configuration builds only that program with debug symbols before launching it.
 Set breakpoints in the source files before starting the debugger.
 
-The build uses GCC because some examples include the GCC-only
-`<bits/stdc++.h>` header. Install Homebrew GCC (the script prefers `g++-16`) if it
-is not already available. The debug executable is written to
-`build/debug/main`; the normal `build/main` executable and `run.sh` build/run
-behavior are unchanged. You can also create the debug executable from a terminal
-with `./scripts/run.sh debug`.
+The script prefers Homebrew GCC (`g++-16`) when available. You can also create
+debug builds from a terminal with `./scripts/run.sh <project> debug`.
 
 ---
