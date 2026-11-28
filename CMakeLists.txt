@@ -20,9 +20,6 @@ file(GLOB_RECURSE CPP_LEARNING_SOURCES CONFIGURE_DEPENDS
 add_executable(cpp_learning
     "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
     ${CPP_LEARNING_SOURCES}
-    dsa/strings/strings.hpp
-    dsa/strings/reverse_string.cpp
-    dsa/strings/valid_palindrome.cpp
     utils/swap_utils.cpp
     utils/array_utils.hpp
     utils/array_utils.cpp

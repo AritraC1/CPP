@@ -30,11 +30,12 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 #include <string>
 #include <vector>
+
 using namespace std;
 
 bool isPalindrome(string s) {
     // Remove spaces and special characters
-    s = utils::remove_spaces_special_chars(s);
+    utils::remove_spaces_special_chars(s);
 
     // Convert to lowercase
     s = utils::to_lower(s);

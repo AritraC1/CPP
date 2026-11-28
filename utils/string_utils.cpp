@@ -6,11 +6,13 @@
 
 namespace utils {
     // Remove spaces and remove special characters from a string
-    std::string remove_spaces_special_chars(std::string& s) {
-        s.erase(std::remove_if(s.begin(), s.end(), [](unsigned char c) {
-            return !std::isalnum(c);
-        }),
-        s.end());
+    void remove_spaces_special_chars(std::string& s) {
+        s.erase(
+            std::remove_if(s.begin(), s.end(), [](unsigned char c) {
+                return !std::isalnum(c);
+            }),
+            s.end()
+        );
     }
 
     // Convert string into array of characters
@@ -28,8 +30,8 @@ namespace utils {
     std::string to_lower(const std::string& s) {
         std::string result = s;
 
-        for (int i = 0; i < result.length(); i++) {
-            result[i] = std::tolower(result[i]);
+        for (std::size_t i = 0; i < result.length(); i++) {
+            result[i] = std::tolower(static_cast<unsigned char>(result[i]));
         }
 
         return result;
@@ -39,8 +41,8 @@ namespace utils {
     std::string to_upper(const std::string& s) {
         std::string result = s;
 
-        for (int i = 0; i < result.length(); i++) {
-            result[i] = std::toupper(result[i]);
+        for (std::size_t i = 0; i < result.length(); i++) {
+            result[i] = std::toupper(static_cast<unsigned char>(result[i]));
         }
 
         return result;

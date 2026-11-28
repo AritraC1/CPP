@@ -5,10 +5,10 @@
 
 namespace utils {
     // Remove spaces and remove special characters from a string
-    std::string remove_spaces_special_chars(std::string& s);
+    void remove_spaces_special_chars(std::string& s);
 
     // Convert string into array of characters
-    std::vector<char> string_to_char_arr (std::string& s);
+    std::vector<char> string_to_char_arr(const std::string& s);
 
     // To lowercase
     std::string to_lower(const std::string& s);
